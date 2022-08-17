@@ -1,0 +1,131 @@
+<html>
+    <head>
+        <title>Creating Blog Page</title>
+        <link rel="stylesheet" href="blog.css"/>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    </head>
+    <body>
+        <!-- navbar-->
+        <nav>
+            <div class="nav-left">
+                <img src="assets/dumbways.png" alt="logo">
+                <ul>
+                    <li>
+                        <a href="index.html">Home</a>
+                    </li>
+                    <li>
+                        <a href="blog.html">My Project</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="nav-right">
+                <a href="contact.html">Contact Me</a>
+            </div>
+        </nav>
+
+        <!--Blog-->
+        <!--Blog Form-->
+        <div class="blog">
+            <div class="blog-form">
+                <div class="form-container">
+                    <form onsubmit="addBlog(event)">
+                        <h1>ADD MY PROJECT</h1>
+                        <div class="project-name">
+                            <label for="input-blog-project-name"> Project Name</label>
+                            <input id="input-blog-project-name" type="text"/>
+                        </div>
+
+                        <div class="date">
+                            <div class="start">
+                                <label for="input-blog-date">Start Date</label>
+                                <input id="input-blog-date" type="date"/>
+                            </div>
+                            <div class="end">
+                                <label for="input-blog-date">End Date</label>
+                                <input id="input-blog-date" type="date"/>
+                            </div>
+                        </div>
+                        <div class="description">
+                            <label for="input-blog-description">Description</label>
+                            <textarea id="input-blog-description" rows="5" style="resize: none;"></textarea>
+                        </div>
+
+                        <div>
+                            <label>Technologies</label>
+                            <div class="kategori">
+                                <div class="check-left">
+                                    <div>
+                                        <input id="input-node-js" type="checkbox" value="Node Js"/><label for="input-node-js">Node Js</label>
+                                    </div>
+                                    <div>
+                                        <input id="input-react-js" type="checkbox" value="React Js"/><label for="input-react-js">React Js</label>
+                                    </div>
+                                </div>
+                                <div class="check-right">
+                                    <div>
+                                        <input id="input-next-js" type="checkbox" value="Next Js"/><label for="input-next-js">Next Js</label>
+                                    </div>
+                                    <div>
+                                        <input id="input-typescript" type="checkbox" value="Typescript"/><label for="input-typescript">Typescript</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div>
+                            <label>Upload Image</label>
+                            <div class="input-blog-image-group">
+                                <label for="input-blog-image">
+                                    <p>Choose</p>
+                                    <img src="assets/attach.png" alt="attach"/>
+                                </label>
+                                <input type="file" id="input-blog-image" hidden />
+                            </div>
+                        </div>
+
+                        <div class="tombol">
+                            <button type="submit">submit</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <hr class="line">
+            <h2>MY PROJECT</h2>
+            <div class="blog-project">
+                <div id="contents" class="blog-list">
+                    <!-- dynamic content would be here -->
+                    <div class="card">
+                        <div class="card-image">
+                            <img src="assets/test.jpg" alt="test" width="100%">
+                        </div>
+                        <div class="desc">
+                            <h3><a href="blog-detail.html" target="_blank">Dumbways Mobile App - 2022</a></h3>
+                            <div class="durasi">durasi 3 bulan</div>
+                            <p>REPUBLIKA.CO.ID, JAKARTA -- Ketimpangan sumber daya manusia (SDM) di
+                                sektor digital masih menjadi isu yang belum terpecahkan. Berdasarkan
+                                penelitian ManpowerGroup, ketimpangan SDM global, termasuk Indonesia,
+                                meningkat dua kali lipat dalam satu dekade terakhir. Khusus di sektor
+                                teknologi yang berkembang pesat, menurut Kemendikbudristek, Indonesia
+                                kekurangan sembilan juta pekerja teknologi hingga tahun 2030. Hal itu
+                                berarti Indonesia memerlukan sekitar 600 ribu SDM digital yang
+                                memasuki pasar setiap tahunnya.</p>
+    
+                            <div class="icon">
+                                <i class="fa-brands fa-react fa-xl"></i>
+                                <i class="fa-brands fa-js fa-xl"></i>
+                                <i class="fa-brands fa-node-js fa-xl"></i>
+                                <i class="fa-brands fa-android fa-xl"></i>
+                            </div>
+                            <div class="btn-group">
+                                <button class="btn-edit">Edit Post</button>
+                                <button class="btn-post">Delete Blog</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="blog.js"></script>
+    </body>
+</html>
